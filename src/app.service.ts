@@ -2,7 +2,15 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World';
+  private tasks = [];
+
+  getTasks() {
+    return this.tasks;
+  }
+
+  createTask({ name }) {
+    this.tasks.push(name);
+
+    return this.tasks;
   }
 }
