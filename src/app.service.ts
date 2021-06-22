@@ -13,4 +13,10 @@ export class AppService {
 
     return this.tasks;
   }
+
+  cleanTasks() {
+    this.tasks = [];
+
+    return this.tasks;
+  }
 }

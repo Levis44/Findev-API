@@ -14,4 +14,9 @@ export class AppController {
   createTask(@Body('name') name: string) {
     return this.appService.createTask({ name });
   }
+
+  @Post('/clean')
+  cleanTasks() {
+    return this.appService.cleanTasks();
+  }
 }
